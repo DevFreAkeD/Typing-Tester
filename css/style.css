@@ -8,29 +8,77 @@ body{
     padding-left: 15px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Make the container take up the full height of the viewport */
+}
+
+.card {
+    width: 800px; /* Set the width */
+    height: 700px; /* Set the height */
+}
+
+.card-body {
+    height: auto; /* Set the height */
+    overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+    
 .type-section {
+    margin-top: 30px; /* Add margin to the top of the card */
     padding-top: 20px ;
     height: auto;
     width: auto;
 }
 
-.results{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 140px);
+#inputf {
+    padding: 13px 20px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
 }
 
-.results li{
+.results {
     display: flex;
+    justify-content: center; /* Center horizontally */
     list-style: none;
-    height: 20;
+    padding: 0;
 }
+
+.results li {
+    height: 100px; /* Adjust the height of each list item */
+    margin: 45px; /* Adjust margin between items */
+}
+
 
 .typing-text p span {
     position: relative;
 }
 
-.typing-text p span:active {
-    color: rgb(42,149,172);
+.typing-text p span.active {
+    color: rgb(0, 0, 0);
+    text-decoration: solid;
+}
+
+.typing-text p span.correct {
+    color: rgba(81, 244, 36, 0.878);
+}
+
+.typing-text p span.incorrect {
+    color: rgb(179, 18, 18);
+    outline: 1px solid #fff;
+    background-color: #ffc7c7;
+    border-radius: 4px;
+}
+
+::selection {
+    color: #fff;
+    background: rgb(42,149,172);
+}
+
+#try-again-button {
+    width: 120px; /* Set the width */
+    height: 40px; /* Set the height */
 }
