@@ -1,1 +1,36 @@
+body{
+    background: rgb(42,149,172);
+    background: radial-gradient(circle, rgba(42,149,172,1) 24%, rgba(8,79,113,1) 84%);
+}
 
+.logo{
+    padding-top: 6px;
+    padding-left: 15px;
+}
+
+.type-section {
+    padding-top: 20px ;
+    height: auto;
+    width: auto;
+}
+
+.results{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.results li{
+    display: flex;
+    list-style: none;
+    height: 20;
+}
+
+.typing-text p span {
+    position: relative;
+}
+
+.typing-text p span:active {
+    color: rgb(42,149,172);
+}
