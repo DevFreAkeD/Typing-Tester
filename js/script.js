@@ -28,5 +28,47 @@ function loadParagraph() {
     typingText.querySelectorAll('span')[0].classList.add('active');
 }
 
+function initTyping() {
+    const char = typingText.querySelectorAll('span');
+    const typedChar = input.value.charAt(charIndex);
+    if (charIndex < char.length && timeLeft > 0) {
+        if (!isTyping) {
+            timer = setInterval(initTime, 1000);
+            isTyping = true;
+        }
+        if (char[charIndex].innerText === typedChar) {
+            char[charIndex].classList.add('correct');
+            console.log("Correct");
+        } else {
+            char[charIndex].classList.add('incorrect');
+            console.log("Incorrect");
+        }
+        charIndex++;
+        char[charIndex].classList.add('active');
+    }
+    clearInterval(timer);
+    input.value = '';
+}
+
+function initTime() {
+    if (timeLeft > 0) {
+        timeLeft--; // Decrease timeLeft instead of time
+        time.innerText = timeLeft;
+    } else {
+        clearInterval(timer);
+    }
+}
+
+function reset() {
+    loadParagraph();
+    clearInterval(timer);
+    timeLeft = maxTime;
+    time.innerText = timeLeft;
+    input.value = '';
+    charIndex = 0;
+    isTyping = false;
+}
+
+input.addEventListener("input", initTyping);
 btn.addEventListener("click", reset);
 loadParagraph();
