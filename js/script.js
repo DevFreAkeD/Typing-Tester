@@ -5,6 +5,7 @@ const wpm = document.querySelector('.wpm span');
 const mistake = document.querySelector('.mistake span');
 const cpm = document.querySelector('.cpm span');
 const btn = document.querySelector('button')
+const tryAgainButton = document.getElementById('try-again-button');
 
 let timer;
 let maxTime = 120;
@@ -97,6 +98,14 @@ function reset() {
     wpm.innerText = 0; // set wpm value to 0
     cpm.innerText = 0; // set cpm value to 0
 }
+
+tryAgainButton.addEventListener('click', function() {
+    tryAgainButton.textContent = "...";     // Change button text to "Trying Again..."
+    setTimeout(function() {
+        // After a delay, change button text back to "Try Again"
+        tryAgainButton.textContent = "Try Again";
+    }, 1000); // Change 2000 to the duration of your try again process in milliseconds
+});
 
 input.addEventListener("input", initTyping);
 loadParagraph();
