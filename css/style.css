@@ -45,13 +45,20 @@ body{
     justify-content: center; /* Center horizontally */
     list-style: none;
     padding: 0;
+    overflow-y: auto;
 }
 
 .results li {
     height: 100px; /* Adjust the height of each list item */
     margin: 45px; /* Adjust margin between items */
+    white-space: nowrap; /* Prevent line breaks */
 }
 
+.results li span {
+    display: inline-block;
+    margin: 0 5px; /* Adjust margin as needed */
+    position: relative;
+}
 
 .typing-text p span {
     position: relative;
