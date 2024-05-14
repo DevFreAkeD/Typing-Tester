@@ -1,5 +1,5 @@
-# Typing-Tester
-A web best typing master coded in HTML, CSS and JS.
+# Typing Tester
+Typing Tester, a web-based online typing master game. Made just for fun with❤️ by Tushar(FreAkeD).
 
 ![image](https://github.com/DevFreAkeD/Typing-Tester/assets/32740788/89a62613-b861-4ee9-924d-b0d75f4c43ff)
 
