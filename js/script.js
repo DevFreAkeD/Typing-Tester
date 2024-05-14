@@ -100,7 +100,7 @@ function reset() {
 }
 
 tryAgainButton.addEventListener('click', function() {
-    tryAgainButton.textContent = "Reseting...";     // Change button text to "Reseting..."
+    tryAgainButton.textContent = ".....";     // Change button text to "Reseting..."
     setTimeout(function() {
         // After a delay, change button text back to "Try Again"
         tryAgainButton.textContent = "Reset";
