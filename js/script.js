@@ -100,13 +100,13 @@ function reset() {
 }
 
 tryAgainButton.addEventListener('click', function() {
-    tryAgainButton.textContent = "...";     // Change button text to "Trying Again..."
+    tryAgainButton.textContent = "Reseting...";     // Change button text to "Reseting..."
     setTimeout(function() {
         // After a delay, change button text back to "Try Again"
-        tryAgainButton.textContent = "Try Again";
-    }, 1000); // Change 2000 to the duration of your try again process in milliseconds
+        tryAgainButton.textContent = "Reset";
+    }, 1000); // Change 1000 to the duration of your try again process in milliseconds
 });
 
 input.addEventListener("input", initTyping);
-btn.addEventListener("click", reset);
+btn.addEventListener("click", reset, 1000);
 loadParagraph();
