@@ -5,5 +5,5 @@ Typing Tester, a web-based online typing master game. Made just for fun with‚ù§Ô
 
 ![image](https://github.com/DevFreAkeD/Typing-Tester/assets/32740788/7b6ec63b-510b-4ca8-bc8c-147e2b881712)
 <hr>
-Live Demo: <a href="https://typing-tester-seven.vercel.app>Click Here</a>
+Live Demo: <a href="https://typing-tester-seven.vercel.app" alt="Demo">Click Here</a>
 
