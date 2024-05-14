@@ -12,12 +12,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Make the container take up the full height of the viewport */
 }
 
 .card {
-    width: 800px; /* Set the width */
-    height: 700px; /* Set the height */
+    width: 900px; /* Set the width */
+    height: 750px; /* Set the height */
 }
 
 .card-body {
@@ -51,12 +50,10 @@ body{
 .results li {
     height: 100px; /* Adjust the height of each list item */
     margin: 45px; /* Adjust margin between items */
-    white-space: nowrap; /* Prevent line breaks */
 }
 
 .results li span {
-    display: inline-block;
-    margin: 0 5px; /* Adjust margin as needed */
+    display: grid;
     position: relative;
 }
 
