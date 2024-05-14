@@ -6,6 +6,13 @@ const mistake = document.querySelector('.mistake span');
 const cpm = document.querySelector('.cpm span');
 const btn = document.querySelector('button')
 
+let timer;
+let maxTime = 120;
+let timeLeft = maxTime;
+let charIndex = 0;
+let mistakes = 0;
+let isTyping = 0;
+
 function loadParagraph() {
     
     console.log("Loading paragraph...");
@@ -40,9 +47,11 @@ function initTyping() {
             char[charIndex].classList.add('correct');
             console.log("Correct");
         } else {
+            mistakes++; //increment mistake count when incorrect word typed
             char[charIndex].classList.add('incorrect');
             console.log("Incorrect");
         }
+        mistake.innerText = mistakes; // update mistakes count.
         charIndex++;
         char[charIndex].classList.add('active');
     }
@@ -60,13 +69,15 @@ function initTime() {
 }
 
 function reset() {
-    loadParagraph();
-    clearInterval(timer);
-    timeLeft = maxTime;
-    time.innerText = timeLeft;
-    input.value = '';
-    charIndex = 0;
-    isTyping = false;
+    loadParagraph(); // load new paragraph.
+    clearInterval(timer); // clear timer.
+    timeLeft = maxTime; // set timeLeft to maxTime.
+    time.innerText = timeLeft; // set timeLeft text back to maxTime.
+    input.value = ''; // reset input values
+    charIndex = 0; // reset charIndex value back to 0
+    mistakes = 0; // set mistakes to 0
+    mistake.innerText = 0; // mistakes count text to 0
+    isTyping = false; // set isTying false.
 }
 
 input.addEventListener("input", initTyping);
