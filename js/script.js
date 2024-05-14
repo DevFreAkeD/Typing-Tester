@@ -105,6 +105,9 @@ tryAgainButton.addEventListener('click', function() {
         // After a delay, change button text back to "Try Again"
         tryAgainButton.textContent = "Reset";
     }, 1000); // Change 1000 to the duration of your try again process in milliseconds
+    // Change Button Color
+    document.getElementById('try-again-button').classList.remove('btn-success');
+    document.getElementById('try-again-button').classList.add('btn-danger');
 });
 
 input.addEventListener("input", initTyping);
