@@ -108,4 +108,5 @@ tryAgainButton.addEventListener('click', function() {
 });
 
 input.addEventListener("input", initTyping);
+btn.addEventListener("click", reset);
 loadParagraph();
